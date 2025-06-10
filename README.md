@@ -9,7 +9,7 @@
 
 - **Data Preparation:** The dataset is loaded and preprocessed using PySpark DataFrame operations, including feature vector assembly.
 - **Model Training:** KMeans clustering is applied for a range of cluster counts.
-- **Cluster Evaluation:** For each $$k$$, the Silhouette score is computed using PySpark’s `ClusteringEvaluator`, which measures how similar an object is to its own cluster compared to other clusters[3].
+- **Cluster Evaluation:** For each $$k$$, the Silhouette score is computed using PySpark’s `ClusteringEvaluator`, which measures how similar an object is to its own cluster compared to other clusters.
 - **Selection of Optimal $$k$$:** The notebook compares Silhouette scores across different cluster counts, helping identify the most appropriate number of clusters for the data.
 
 **Silhouette Score Explained**
