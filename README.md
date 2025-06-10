@@ -10,20 +10,20 @@
 - **Data Preparation:** The dataset is loaded and preprocessed using PySpark DataFrame operations, including feature vector assembly.
 - **Model Training:** KMeans clustering is applied for a range of cluster counts.
 - **Cluster Evaluation:** For each $$k$$, the Silhouette score is computed using PySpark’s `ClusteringEvaluator`, which measures how similar an object is to its own cluster compared to other clusters[3].
-- **Selection of Optimal $$k$$:** The notebook compares Silhouette scores across different cluster counts, helping identify the most appropriate number of clusters for the data[2][3].
+- **Selection of Optimal $$k$$:** The notebook compares Silhouette scores across different cluster counts, helping identify the most appropriate number of clusters for the data.
 
 **Silhouette Score Explained**
 
 - The Silhouette score ranges from $$-1$$ to $$1$$:
   - Values close to $$1$$ indicate well-separated, cohesive clusters.
   - Scores near $$0$$ suggest overlapping clusters.
-  - Negative values imply possible misclassification of samples[2][3][5].
+  - Negative values imply possible misclassification of samples.
 - This metric provides a quantitative and visual way to validate clustering results and avoid arbitrary selection of $$k$$.
 
 **PySpark Implementation Highlights**
 
 - Utilizes PySpark’s distributed computing capabilities for scalable cluster analysis.
-- Employs `ClusteringEvaluator` for efficient Silhouette score calculation on large datasets[3].
+- Employs `ClusteringEvaluator` for efficient Silhouette score calculation on large datasets.
 - The approach is suitable for big data scenarios where traditional single-machine tools (like scikit-learn) may not scale.
 
 **Best Practices Demonstrated**
@@ -43,12 +43,6 @@
 | Clustering               | KMeans (PySpark MLlib)     | Group data into clusters                  |
 | Evaluation               | ClusteringEvaluator        | Compute Silhouette score for each $$k$$   |
 | Model Selection          | Score Comparison           | Choose best $$k$$ based on Silhouette     |
-
----
-
-**References:**  
-- [PySpark ClusteringEvaluator Documentation][3]  
-- [Silhouette Analysis in Clustering][2][5]
 
 ---
 
